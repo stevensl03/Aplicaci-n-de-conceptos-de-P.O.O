@@ -11,4 +11,3 @@ Tecnologías utilizadas:
 - Java 11
 - Maven
 - Base de datos H2
-- Lombok
