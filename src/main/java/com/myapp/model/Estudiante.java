@@ -15,6 +15,40 @@ public class Estudiante extends Persona {
         this.promedio = promedio;
     }
 
+    //getters y setters
+
+    public double getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(double codigo) {
+        this.codigo = codigo;
+    }
+
+    public Programa getPrograma() {
+        return programa;
+    }
+
+    public void setPrograma(Programa programa) {
+        this.programa = programa;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    public double getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
+    }
+
     @Override
     public String toString() {
         return "Estudiante{" +

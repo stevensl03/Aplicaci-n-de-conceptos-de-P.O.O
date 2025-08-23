@@ -12,6 +12,39 @@ public class Inscripcion {
         this.semestre = semestre;
         this.estudiante = estudiante;
     }
+    
+    // Getters and Setters
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
+    public int getAño() {
+        return año;
+    }
+
+    public void setAño(int año) {
+        this.año = año;
+    }
+
+    public int getSemestre() {
+        return semestre;
+    }
+
+    public void setSemestre(int semestre) {
+        this.semestre = semestre;
+    }
+
+    public Persona getEstudiante() {
+        return estudiante;
+    }
+
+    public void setEstudiante(Persona estudiante) {
+        this.estudiante = estudiante;
+    }
 
     @Override
     public String toString() {
