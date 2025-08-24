@@ -1,0 +1,15 @@
+com\myapp\repository\Schema.class
+com\myapp\Main.class
+com\myapp\model\Profesor.class
+com\myapp\model\Inscripcion.class
+com\myapp\model\Programa.class
+com\myapp\model\Estudiante.class
+com\myapp\repository\H2DB.class
+com\myapp\repository\CursosProfesores.class
+com\myapp\model\Facultad.class
+com\myapp\repository\CursosInscritos.class
+com\myapp\model\Persona.class
+com\myapp\repository\InscripcionesPersonas.class
+com\myapp\service\ServicionInterface.class
+com\myapp\model\Curso.class
+com\myapp\model\CursoProfesor.class

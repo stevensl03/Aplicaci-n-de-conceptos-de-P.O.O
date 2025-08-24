@@ -4,9 +4,9 @@ public class Inscripcion {
     private Curso curso;
     private int año;
     private int semestre;
-    private Persona estudiante;
+    private Estudiante estudiante;
 
-    public Inscripcion(Curso curso, int año, int semestre, Persona estudiante) {
+    public Inscripcion(Curso curso, int año, int semestre, Estudiante estudiante) {
         this.curso = curso;
         this.año = año;
         this.semestre = semestre;
@@ -38,11 +38,11 @@ public class Inscripcion {
         this.semestre = semestre;
     }
 
-    public Persona getEstudiante() {
+    public Estudiante getEstudiante() {
         return estudiante;
     }
 
-    public void setEstudiante(Persona estudiante) {
+    public void setEstudiante(Estudiante estudiante) {
         this.estudiante = estudiante;
     }
 

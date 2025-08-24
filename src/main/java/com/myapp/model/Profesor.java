@@ -8,6 +8,15 @@ public class Profesor extends Persona {
         this.tipoContrato = tipoContrato;
     }
 
+    //getters y setters
+    public String getTipoContrato() {
+        return tipoContrato;
+    }
+
+    public void setTipoContrato(String tipoContrato) {
+        this.tipoContrato = tipoContrato;
+    }
+
     @Override
     public String toString() {
         return "Profesor{" +
