@@ -21,11 +21,21 @@ public class Main {
         Estudiante estudiante2 = new Estudiante(3, "Carlos", "Gomez", "estudiante2@inillanos.edu.co", 1, programa1, true, 40);
         Estudiante estudiante1 = new Estudiante(2, "Maria", "Lopez", "estudiante@inillanos.edu.co", 1, programa1, true, 40);
         Curso curso1 = new Curso(1, "Algoritmia y Programación", programa1, true);
-       // Inscripcion inscripcion1 = new Inscripcion(curso1,2025, 01, estudiante1);
-       // Inscripcion inscripcion2 = new Inscripcion(curso1,2025, 01, estudiante2);
+        Profesor profesor1 = new Profesor(4, "Ana", "Ramirez", "ana.ramirez@inillanos.edu.co", "ocasional");
+        CursoProfesor cursoProfesor1 = new CursoProfesor(profesor1, 2025, 1, curso1);
+        
+        CursosProfesores cursosProfesores = new CursosProfesores();
+        cursosProfesores.inscribir(cursoProfesor1);
+        cursosProfesores.guardarInformacion(cursoProfesor1);
+        cursosProfesores.cargarDatosDesdeBD();
+        System.out.println(cursosProfesores.imprimirListado());
 
-        CursosInscritos cursosInscritos = new CursosInscritos();
-        cursosInscritos.cargarDatos();
+        
+
+
+        //CursosInscritos cursosInscritos = new CursosInscritos();
+        //cursosInscritos.guardarInformacion(inscripcion2);
+        //cursosInscritos.cargarDatos();
         
         //boolean X1 = cursosInscritos.inscribirCurso(inscripcion1);
         //cursosInscritos.guardarInformacion(inscripcion1);
@@ -35,7 +45,7 @@ public class Main {
         //confirmacion(X1);
   
        // System.out.println(cursosInscritos.imprimirPosicion("22221"));
-        System.out.println(cursosInscritos.imprimirListado());
+        //System.out.println(cursosInscritos.imprimirListado());
         //System.out.println("Cantidad actual de inscripciones: " + cursosInscritos.cantidadActual());
 
     }
