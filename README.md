@@ -11,3 +11,8 @@ Tecnologías utilizadas:
 - Java 11
 - Maven
 - Base de datos H2
+
+Hecho por: 
+-BRAYAN ACOSTA - 160004800
+-STEVEN SANCHEZ - 160004734
+
