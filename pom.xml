@@ -14,54 +14,50 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- BOM de JavaFX: gestiona todas las versiones -->
+            <dependency>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-bom</artifactId>
+                <version>24</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <!-- Base de datos H2 -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>2.2.224</version>
         </dependency>
 
-
-        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+        <!-- JavaFX: solo los módulos que uses -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>24</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx</artifactId>
-            <version>24</version>
-            <type>pom</type>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>24</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>24</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-base</artifactId>
-            <version>24</version>
-        </dependency>
+
+        <!-- Gluon Charm -->
         <dependency>
             <groupId>com.gluonhq</groupId>
             <artifactId>charm-glisten</artifactId>
             <version>6.2.3</version>
         </dependency>
-
     </dependencies>
-    <!-- Gluon no está en Maven Central; agrega su repo -->
+
+    <!-- Repositorio de Gluon -->
     <repositories>
         <repository>
             <id>gluon-releases</id>

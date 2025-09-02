@@ -9,22 +9,22 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="666.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myApp.ui.opcionesInscripcionesPersonasController">
+<AnchorPane prefHeight="666.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myApp.ui.OpcionesInscripcionesPersonasController">
     <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7e5b3" height="192.0" layoutX="14.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" width="550.0" />
         <Label layoutX="43.0" layoutY="88.0" prefHeight="18.0" prefWidth="53.0" text="id:" />
-        <TextField fx:id="txtAnio" layoutX="137.0" layoutY="119.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite Nombre" />
+        <TextField fx:id="txtNombre" layoutX="137.0" layoutY="119.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite Nombre" />
         <Label layoutX="43.0" layoutY="123.0" prefHeight="18.0" prefWidth="54.0" text="nombres" />
-        <TextField fx:id="txtSemestre" layoutX="136.0" layoutY="161.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite Apellido" />
+        <TextField fx:id="txtApellido" layoutX="136.0" layoutY="161.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite Apellido" />
         <Label layoutX="43.0" layoutY="165.0" prefHeight="18.0" prefWidth="54.0" text="apellidos" />
         <Label layoutX="43.0" layoutY="213.0" prefHeight="18.0" prefWidth="54.0" text="email" />
         <Label layoutX="44.0" layoutY="332.0" text="Lista de Curso Profesor" />
         <TableView fx:id="tlbCursoProfesor" layoutX="36.0" layoutY="369.0" prefHeight="200.0" prefWidth="532.0">
             <columns>
-                <TableColumn fx:id="colProfesor" prefWidth="57.60003662109375" text="Id" />
-                <TableColumn fx:id="colAnio" prefWidth="120.79998779296875" text="Nombre" />
-                <TableColumn fx:id="colSemestre" minWidth="0.0" prefWidth="136.0" text="Apellido" />
-                <TableColumn fx:id="colCurso" prefWidth="221.60003662109375" text="Email" />
+                <TableColumn fx:id="colId" prefWidth="57.60003662109375" text="Id" />
+                <TableColumn fx:id="colNombre" prefWidth="120.79998779296875" text="Nombre" />
+                <TableColumn fx:id="colApellido" minWidth="0.0" prefWidth="136.0" text="Apellido" />
+                <TableColumn fx:id="colEmail" prefWidth="221.60003662109375" text="Email" />
             </columns>
         </TableView>
 
@@ -33,10 +33,11 @@
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Button layoutX="64.0" layoutY="278.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" text="Crear" />
-      <Button layoutX="386.0" layoutY="281.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="94.0" text="Actualizar" />
-      <Button layoutX="252.0" layoutY="585.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="82.0" text="Eliminar" />
-      <TextField fx:id="txtAnio1" layoutX="136.0" layoutY="84.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite ID" />
-      <TextField fx:id="txtSemestre1" layoutX="136.0" layoutY="209.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite Email" />
+      <Button layoutX="64.0" layoutY="278.0" mnemonicParsing="false" onAction="#OptionCrear" prefHeight="39.0" prefWidth="82.0" text="Crear" />
+      <Button layoutX="386.0" layoutY="281.0" mnemonicParsing="false" onAction="#OtionActuaizar" prefHeight="33.0" prefWidth="94.0" text="Actualizar" />
+      <Button layoutX="252.0" layoutY="585.0" mnemonicParsing="false" onAction="#OptionEliminar" prefHeight="34.0" prefWidth="82.0" text="Eliminar" />
+      <TextField fx:id="txtid" layoutX="136.0" layoutY="84.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite ID" />
+      <TextField fx:id="txtEmail" layoutX="136.0" layoutY="209.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite Email" />
+      <Button layoutX="18.0" layoutY="12.0" mnemonicParsing="false" onAction="#OptionAtras" text="Atrás" />
     </children>
 </AnchorPane>

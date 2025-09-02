@@ -18,6 +18,9 @@ public class CursosInscritos implements Servicios {
 
     private List<Inscripcion>  inscripcionesLista = new ArrayList<>();
 
+    public List<Inscripcion> getInscripcionesLista() {
+        return new ArrayList<>(inscripcionesLista);
+    }
 
     //CRUD
     //inscribir curso

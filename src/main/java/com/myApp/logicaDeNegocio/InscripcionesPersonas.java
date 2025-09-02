@@ -11,8 +11,13 @@ import java.util.List;
 import java.util.Objects;
 public class InscripcionesPersonas {
     private List<Persona> listaPersonas = new ArrayList<>();
+    // en com.myApp.logicaDeNegocio.InscripcionesPersonas
+    public List<Persona> getListaPersonas() {
+        return new ArrayList<>(listaPersonas); // copia defensiva
+    }
 
-        //CRUD
+
+    //CRUD
     //inscribir curso
     public boolean inscribir(Persona persona) {
         Objects.requireNonNull(persona, "persona");
