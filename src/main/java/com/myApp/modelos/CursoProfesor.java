@@ -12,6 +12,7 @@ public class CursoProfesor {
         this.semestre = semestre;
         this.curso = curso;
     }
+    public CursoProfesor() {}
 
     //getters y setters
     public Profesor getProfesor() {

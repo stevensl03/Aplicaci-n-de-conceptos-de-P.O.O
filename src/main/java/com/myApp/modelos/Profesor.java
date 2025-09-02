@@ -17,6 +17,7 @@ public class Profesor extends Persona {
         this.tipoContrato = tipoContrato;
     }
 
+
     @Override
     public String toString() {
         return "Profesor{" +
@@ -24,4 +25,7 @@ public class Profesor extends Persona {
                 "} " + super.toString();
     }
 
+    public String getNombre() {
+        return  super.getNombres();
+    }
 }

@@ -9,11 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import com.myApp.modelos.Curso;
 import com.myApp.modelos.CursoProfesor;
+import com.myApp.modelos.Profesor;
 
 
 public class CursosProfesores implements Servicios{
     private List<CursoProfesor> listaCursoProfesors = new ArrayList<>();
+    private List<Profesor> listaProfesors = new ArrayList<>();
+    private List<Curso> listaCursos = new ArrayList<>();
     
     //CRUD
     //inscribir curso
@@ -21,7 +25,18 @@ public class CursosProfesores implements Servicios{
         Objects.requireNonNull(cursoProfesor, "cursoProfesor");
         int idx = indexOfByKey(cursoProfesor);
         if (idx != -1) return false;
+        listaProfesors.add(cursoProfesor.getProfesor());
+        listaCursoProfesors.add(cursoProfesor);
         return listaCursoProfesors.add(cursoProfesor);
+    }
+
+    /// /
+    ///
+    public List<Profesor> getListaProfesors() {
+        return listaProfesors;
+    }
+    public List<Curso> getListaCursos () {
+        return listaCursos;
     }
 
     //base de datos h2
