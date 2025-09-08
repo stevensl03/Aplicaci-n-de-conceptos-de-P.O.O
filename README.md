@@ -1,4 +1,5 @@
 Proyecto conceptos basicos de programacion orientada a objetos
+
     -Interfaz grafica: javafx
     -Persistencia: H2
 
