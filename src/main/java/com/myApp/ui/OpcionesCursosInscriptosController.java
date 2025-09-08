@@ -1,8 +1,8 @@
 package com.myApp.ui;
 
 import com.myApp.logicaDeNegocio.CursosInscritos;
-import com.myApp.logicaDeNegocio.H2DB;
-import com.myApp.logicaDeNegocio.Schema;
+import com.myApp.logicaDB.H2DB;
+import com.myApp.logicaDB.Schema;
 import com.myApp.modelos.Curso;
 import com.myApp.modelos.Estudiante;
 import com.myApp.modelos.Inscripcion;
@@ -23,7 +23,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.sql.*;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class OpcionesCursosInscriptosController {
 

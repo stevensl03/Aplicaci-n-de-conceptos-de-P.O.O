@@ -1,4 +1,4 @@
-package com.myApp.logicaDeNegocio;
+package com.myApp.logicaDB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

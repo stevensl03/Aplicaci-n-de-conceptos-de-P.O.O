@@ -14,6 +14,7 @@ public class Estudiante extends Persona {
         this.activo = activo;
         this.promedio = promedio;
     }
+    public Estudiante() {}
 
     //getters y setters
 

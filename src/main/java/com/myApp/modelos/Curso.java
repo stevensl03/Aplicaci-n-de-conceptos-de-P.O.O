@@ -13,6 +13,7 @@ public class Curso {
         this.programa = programa;
         this.activo = activo;
     }
+    public Curso() {}
     
     //getters y setters
     public int getId() {

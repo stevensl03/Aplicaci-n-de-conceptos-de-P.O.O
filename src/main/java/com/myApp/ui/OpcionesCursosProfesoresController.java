@@ -1,7 +1,7 @@
 package com.myApp.ui;
 
 import com.myApp.logicaDeNegocio.CursosProfesores;
-import com.myApp.logicaDeNegocio.Schema;
+import com.myApp.logicaDB.Schema;
 import com.myApp.modelos.*;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
@@ -119,71 +119,6 @@ public class OpcionesCursosProfesoresController {
     @FXML
     void initialize() {
         Schema.init();
-
-        // ----- Datos de ejemplo -----
-        Persona decano = new Persona(1, "Julian", "Martinez", "decano@inillanos.edu.co");
-        Facultad facultad1 = new Facultad(1, "Facultad de Ciencias Basicas e Ingenieria", decano);
-        Programa programa1 = new Programa(1, "Ingenieria de Sistemas", 10, java.time.LocalDate.now(), facultad1);
-
-        Curso curso1 = new Curso(1, "Algoritmia y Programación", programa1, true);
-        Curso curso2 = new Curso(2, "Pensamiento Lógico Matemático", programa1, true);
-
-        Profesor profesor1 = new Profesor(1, "Ana", "Ramirez", "ana.ramirez@inillanos.edu.co", "ocasional");
-        Profesor profesor2 = new Profesor(2, "Juan", "Perez", "perez.rr@inillanos.edu.co", "ocasional");
-
-        // Obtener listas de negocio y añadir ejemplos
-        List<Profesor> profesores = cursosProfesores.getListaProfesors(); // usa el nombre exacto de tu método
-        List<Curso> cursos = cursosProfesores.getListaCursos();
-        cursosProfesores.cargarDatosDesdeBD();
-
-
-
-        if (profesores.stream().noneMatch(p -> p.getId() == profesor1.getId())) profesores.add(profesor1);
-        if (profesores.stream().noneMatch(p -> p.getId() == profesor2.getId())) profesores.add(profesor2);
-        if (cursos.stream().noneMatch(c -> c.getId() == curso1.getId())) cursos.add(curso1);
-        if (cursos.stream().noneMatch(c -> c.getId() == curso2.getId())) cursos.add(curso2);
-
-        // Llenar ComboBox
-        selectProfesor.setItems(FXCollections.observableArrayList(profesores));
-        selectCurso.setItems(FXCollections.observableArrayList(cursos));
-
-        // Mostrar solo el nombre en los ComboBox
-        selectProfesor.setCellFactory(lv -> new ListCell<>() {
-            @Override protected void updateItem(Profesor p, boolean empty) {
-                super.updateItem(p, empty);
-                setText(empty || p == null ? "" : p.getNombre());
-            }
-        });
-        selectProfesor.setButtonCell(new ListCell<>() {
-            @Override protected void updateItem(Profesor p, boolean empty) {
-                super.updateItem(p, empty);
-                setText(empty || p == null ? "" : p.getNombre());
-            }
-        });
-
-        selectCurso.setCellFactory(lv -> new ListCell<>() {
-            @Override protected void updateItem(Curso c, boolean empty) {
-                super.updateItem(c, empty);
-                setText(empty || c == null ? "" : c.getNombre());
-            }
-        });
-        selectCurso.setButtonCell(new ListCell<>() {
-            @Override protected void updateItem(Curso c, boolean empty) {
-                super.updateItem(c, empty);
-                setText(empty || c == null ? "" : c.getNombre());
-            }
-        });
-
-        // Configurar tabla
-        tlbCursoProfesor.setItems(dataCursoProfesor);
-
-        colAnio.setCellValueFactory(cd -> new ReadOnlyObjectWrapper<>(cd.getValue().getAnio()));
-        colSemestre.setCellValueFactory(cd -> new ReadOnlyObjectWrapper<>(cd.getValue().getSemestre()));
-
-        // Si Curso/Profesor tienen toString() legible, esto basta:
-        colCurso.setCellValueFactory(cd -> new ReadOnlyObjectWrapper<>(cd.getValue().getCurso()));
-        colProfesor.setCellValueFactory(cd -> new ReadOnlyObjectWrapper<>(cd.getValue().getProfesor()));
-
 
     }
 

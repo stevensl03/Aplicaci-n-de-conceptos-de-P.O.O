@@ -7,12 +7,12 @@ public class Profesor extends Persona {
         super(id, nombres, apellidos, email);
         this.tipoContrato = tipoContrato;
     }
+    public Profesor() {}
 
     //getters y setters
     public String getTipoContrato() {
         return tipoContrato;
     }
-
     public void setTipoContrato(String tipoContrato) {
         this.tipoContrato = tipoContrato;
     }

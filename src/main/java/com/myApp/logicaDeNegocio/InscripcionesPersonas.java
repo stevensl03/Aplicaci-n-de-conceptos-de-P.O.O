@@ -1,11 +1,11 @@
 package com.myApp.logicaDeNegocio;
 
+import com.myApp.logicaDB.dao.ImpPersonaDAO;
+import com.myApp.logicaDB.dao.PersonaDAO;
+import com.myApp.logicaDB.repository.PersonaRepository;
 import com.myApp.modelos.*;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -46,64 +46,17 @@ public class InscripcionesPersonas {
 
     //base de datos h2
     public void guardarInformacion(Persona persona) {
-        Objects.requireNonNull(persona, "persona");
+        inscribir(persona);
+        PersonaDAO personaDAO = new ImpPersonaDAO();
+        PersonaRepository personaRepository = new PersonaRepository(personaDAO);
+        personaRepository.upsert(persona);
 
-        final String MERGE_PERSONA = """
-            MERGE INTO PERSONA (id, nombres, apellidos, email) KEY(id)
-            VALUES (?, ?, ?, ?)
-        """;
-
-        try (Connection cn = H2DB.getConnection();
-            PreparedStatement ps = cn.prepareStatement(MERGE_PERSONA)) {
-
-            ps.setDouble(1, persona.getId());
-            ps.setString(2, persona.getNombres());
-            ps.setString(3, persona.getApellidos());
-            ps.setString(4, persona.getEmail());
-            ps.executeUpdate();
-
-            // Mantener la lista en memoria coherente
-            int idx = indexOfByKey(persona);
-            if (idx == -1) {
-                listaPersonas.add(persona);
-            } else {
-                listaPersonas.set(idx, persona);
-            }
-
-        } catch (SQLException e) {
-            System.err.println("❌ Error guardando Persona: " + e.getMessage());
-        }
     }
 
     public void cargarDatosDesdeBD() {
-        final String SQL = """
-            SELECT id, nombres, apellidos, email
-            FROM PERSONA
-            ORDER BY apellidos, nombres
-        """;
-
-        List<Persona> tmp = new ArrayList<>();
-
-        try (Connection cn = H2DB.getConnection();
-            PreparedStatement ps = cn.prepareStatement(SQL);
-            ResultSet rs = ps.executeQuery()) {
-
-            while (rs.next()) {
-                Persona p = new Persona(
-                    rs.getDouble(1),   // id
-                    rs.getString(2),   // nombres
-                    rs.getString(3),   // apellidos
-                    rs.getString(4)    // email
-                );
-                tmp.add(p);
-            }
-
-            listaPersonas.clear();
-            listaPersonas.addAll(tmp);
-
-        } catch (SQLException e) {
-            System.err.println("❌ Error cargando Personas desde BD: " + e.getMessage());
-        }
+        PersonaDAO personaDAO = new ImpPersonaDAO();
+        PersonaRepository personaRepository = new PersonaRepository(personaDAO);
+        listaPersonas = personaRepository.listar("");
     }
 
 

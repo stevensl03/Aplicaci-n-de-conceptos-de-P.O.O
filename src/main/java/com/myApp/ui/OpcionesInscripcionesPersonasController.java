@@ -1,7 +1,7 @@
 package com.myApp.ui;
 
 import com.myApp.logicaDeNegocio.InscripcionesPersonas;
-import com.myApp.logicaDeNegocio.Schema;
+import com.myApp.logicaDB.Schema;
 import com.myApp.modelos.Persona;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
