@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="646.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myApp.ui.OpcionesCursosProfesoresController">
+<AnchorPane prefHeight="646.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myApp.ui.CursoProfesorController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddffff" height="200.0" layoutX="34.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
       <Label layoutX="204.0" layoutY="26.0" text="Gestionar Curso Profesores">
@@ -37,6 +37,6 @@
       </TableView>
       <ComboBox fx:id="selectProfesor" layoutX="137.0" layoutY="75.0" onAction="#mostrarListaProfesores" prefHeight="26.0" prefWidth="382.0" />
       <ComboBox fx:id="selectCurso" layoutX="136.0" layoutY="209.0" onAction="#MostrarListaCursos" prefHeight="26.0" prefWidth="382.0" />
-      <BottomNavigationButton layoutX="13.0" layoutY="14.0" onAction="#backScene" prefHeight="26.0" prefWidth="62.0" text="Atras" />
+      <BottomNavigationButton layoutX="13.0" layoutY="14.0" onAction="#volverAtras" prefHeight="26.0" prefWidth="62.0" text="Atras" />
    </children>
 </AnchorPane>

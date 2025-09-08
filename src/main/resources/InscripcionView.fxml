@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="680.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myApp.ui.OpcionesCursosInscriptosController">
+<AnchorPane prefHeight="680.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myApp.ui.InscripcionController">
     <children>
         <Label layoutX="204.0" layoutY="26.0" text="Gestion de cursos inscriptos">
          <font>
@@ -35,7 +35,7 @@
       <Button layoutX="175.0" layoutY="270.0" mnemonicParsing="false" onAction="#CrearCursosInscritos" prefHeight="34.0" prefWidth="58.0" text="crear" />
       <Button layoutX="267.0" layoutY="270.0" mnemonicParsing="false" onAction="#ActualizarCursosInscritos" prefHeight="34.0" prefWidth="78.0" text="Actualizar" />
       <Button layoutX="267.0" layoutY="590.0" mnemonicParsing="false" onAction="#EliminarCursosInscritos" prefHeight="34.0" prefWidth="58.0" text="Eliminar" />
-      <Button layoutX="60.0" layoutY="26.0" mnemonicParsing="false" onAction="#OptionAtras" text="Atrás" />
+      <Button layoutX="60.0" layoutY="26.0" mnemonicParsing="false" onAction="#volverAtras" text="Atrás" />
 
     </children>
 </AnchorPane>

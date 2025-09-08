@@ -14,7 +14,7 @@ public class MenuController {
     @FXML
     void irAOpcionesCursosProfesores(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/OpcionesCursosProfesores.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/CursoProfesorView.fxml"));
             Scene scene = new Scene(loader.load());
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
@@ -28,7 +28,7 @@ public class MenuController {
     @FXML
     void irACursosInscriptos(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/OpcionesCursosInscriptos.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/InscripcionView.fxml"));
             Scene scene = new Scene(loader.load());
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
@@ -41,7 +41,7 @@ public class MenuController {
     @FXML
     void irACursosPersonas(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/OpcionesInscripcionPersona.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/PersonaView.fxml"));
             Scene scene = new Scene(loader.load());
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);

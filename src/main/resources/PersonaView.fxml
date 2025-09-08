@@ -9,9 +9,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="666.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myApp.ui.OpcionesInscripcionesPersonasController">
+<AnchorPane prefHeight="666.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myApp.ui.PersonasController">
     <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7e5b3" height="192.0" layoutX="14.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" width="550.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffee" height="192.0" layoutX="14.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" width="550.0" />
         <Label layoutX="43.0" layoutY="88.0" prefHeight="18.0" prefWidth="53.0" text="id:" />
         <TextField fx:id="txtNombre" layoutX="137.0" layoutY="119.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite Nombre" />
         <Label layoutX="43.0" layoutY="123.0" prefHeight="18.0" prefWidth="54.0" text="nombres" />
@@ -33,11 +33,11 @@
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Button layoutX="64.0" layoutY="278.0" mnemonicParsing="false" onAction="#OptionCrear" prefHeight="39.0" prefWidth="82.0" text="Crear" />
-      <Button layoutX="386.0" layoutY="281.0" mnemonicParsing="false" onAction="#OtionActuaizar" prefHeight="33.0" prefWidth="94.0" text="Actualizar" />
-      <Button layoutX="252.0" layoutY="585.0" mnemonicParsing="false" onAction="#OptionEliminar" prefHeight="34.0" prefWidth="82.0" text="Eliminar" />
+      <Button layoutX="64.0" layoutY="278.0" mnemonicParsing="false" onAction="#crearPersona" prefHeight="39.0" prefWidth="82.0" text="Crear" />
+      <Button layoutX="386.0" layoutY="281.0" mnemonicParsing="false" onAction="#actulizarPersona" prefHeight="33.0" prefWidth="94.0" text="Actualizar" />
+      <Button layoutX="252.0" layoutY="585.0" mnemonicParsing="false" onAction="#EliminarPersona" prefHeight="34.0" prefWidth="82.0" text="Eliminar" />
       <TextField fx:id="txtid" layoutX="136.0" layoutY="84.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite ID" />
       <TextField fx:id="txtEmail" layoutX="136.0" layoutY="209.0" prefHeight="26.0" prefWidth="382.0" promptText="Digite Email" />
-      <Button layoutX="18.0" layoutY="12.0" mnemonicParsing="false" onAction="#OptionAtras" text="Atrás" />
+      <Button layoutX="18.0" layoutY="12.0" mnemonicParsing="false" onAction="#volverAtras" text="Atrás" />
     </children>
 </AnchorPane>
