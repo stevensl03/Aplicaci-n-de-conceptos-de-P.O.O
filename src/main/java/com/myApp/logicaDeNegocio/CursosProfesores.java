@@ -41,6 +41,9 @@ public class CursosProfesores implements Servicios{
     }
 
     public void cargarDatosDesdeBD() {
+        CursoProfesorDAO cursoProfesorDAO = new ImpCursoProfesorDAO();
+        CursoProfesorRepository cursoProfesorRepository = new CursoProfesorRepository(cursoProfesorDAO);
+        listaCursoProfesors = cursoProfesorRepository.listarTodo();
 
     }
 

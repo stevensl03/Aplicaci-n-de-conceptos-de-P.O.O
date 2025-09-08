@@ -141,7 +141,7 @@ public class ImpCursoProfesorDAO implements CursoProfesorDAO {
 
         Curso curso = new Curso();
         curso.setId(cursoId);                 // <-- getters/setters de tu modelo
-
+        System.out.println("Curso Profesor:" + prof);
         return new CursoProfesor(prof, anio, semestre, curso);
     }
 }

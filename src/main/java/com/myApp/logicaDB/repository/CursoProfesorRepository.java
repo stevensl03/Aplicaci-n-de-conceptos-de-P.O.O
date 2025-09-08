@@ -24,7 +24,9 @@ public class CursoProfesorRepository {
         return cursoProfesorDAO.findOne(profesorPersonaId, cursoId, anio, semestre);
     }
 
-    public List<CursoProfesor> listarTodo() { return cursoProfesorDAO.findAll(); }
+    public List<CursoProfesor> listarTodo() {
+        return cursoProfesorDAO.findAll();
+    }
 
     public List<CursoProfesor> listarPorProfesor(double profesorPersonaId) {
         return cursoProfesorDAO.findByProfesor(profesorPersonaId);
